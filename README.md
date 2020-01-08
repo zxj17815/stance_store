@@ -120,5 +120,5 @@ pip install oss2
     ```
 3. 生成环境下数据库迁移需要使用指定settings命令：
     ```shell
-    python3 manage.py migrate --settings=aliyun.settings_por
+    python3 manage.py migrate --settings=stance_store.settings_por
     ```
