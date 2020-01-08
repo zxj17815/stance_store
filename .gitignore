@@ -1,0 +1,16 @@
+# uwsgi记录
+uwsgi/uwsgi.log
+uwsgi/uwsgi.pid
+uwsgi/uwsgi.status
+# 密钥
+cert/apiclient_cert.pem
+cert/apiclient_key.pem
+# 定时任务日志
+tmp/delete_expired_orders_job.log
+tmp/test.txt
+# 上传文件夹
+upload/*
+# pyc 缓存文件
+*.pyc
+# 第三方密钥文件
+access_key.py
