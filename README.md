@@ -20,8 +20,8 @@
 │   ├── urls.py
 │   ├── wsgi_por.py
 │   └── wsgi.py
-├── store
-│   ├── access_key.py
+├── store # 商店基础数据应用
+│   ├── access_key.py # 阿里云oss密钥
 │   ├── admin.py
 │   ├── apps.py
 │   ├── __init__.py
@@ -31,16 +31,16 @@
 │   ├── tests.py
 │   ├── urls.py
 │   └── views.py
-├── tmp
+├── tmp # 其他日志
 │   └── delete_expired_orders_job.log
-├── uwsgi
+├── uwsgi # uwsgi内容
 │   ├── uwsgi.log
 │   ├── uwsgi.pid
 │   └── uwsgi.status
 ├── uwsgi.ini # 开发uwsgi
 ├── uwsgi_por.ini # 生产uwsgi
-└── wechat_store_miniprogram
-    ├── access_key.py
+└── wechat_store_miniprogram # 小程序商店应用
+    ├── access_key.py # 微信相关密钥
     ├── admin.py
     ├── apps.py
     ├── cron.py
@@ -50,7 +50,7 @@
     ├── models.py
     ├── serializers.py
     ├── tests.py
-    ├── tools
+    ├── tools # 小程序的工具
     │   ├── __init__.py
     │   ├── payment.py
     │   ├── __pycache__
