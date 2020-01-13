@@ -67,7 +67,7 @@ class UpdateImageView(views.APIView):
             ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 4))
             time_stamp = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
             postfix = os.path.splitext(file_obj.name)[-1]
-            image_name = ran_str+str(time_stamp)+postfix
+            image_name = 'stance_store/'+ran_str+str(time_stamp)+postfix
             result=bucket.put_object(image_name, file_obj)
             image=models.Image(image='https://'+access_key.ALIYUN['OSS_VIEW_URL']+'/'+image_name,file_name=image_name,request_id=result.request_id,etag=result.etag)
             image.save()
@@ -101,7 +101,7 @@ class ProductImageValViewSet(viewsets.ModelViewSet):
                 ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 4))
                 time_stamp = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
                 postfix = os.path.splitext(file_obj.name)[-1]
-                image_name = ran_str+str(time_stamp)+postfix
+                image_name = 'stance_store/'+ran_str+str(time_stamp)+postfix
                 result=bucket.put_object(image_name, file_obj)
                 image=models.Image(image=image_name,request_id=result.request_id,etag=result.etag)
                 image.save()
@@ -128,7 +128,7 @@ class ProductImageValViewSet(viewsets.ModelViewSet):
                 ran_str = ''.join(random.sample(string.ascii_letters + string.digits, 4))
                 time_stamp = time.strftime('%Y%m%d%H%M%S',time.localtime(time.time()))
                 postfix = os.path.splitext(file_obj.name)[-1]
-                image_name = ran_str+str(time_stamp)+postfix
+                image_name = 'stance_store/'+ran_str+str(time_stamp)+postfix
                 result=bucket.put_object(image_name, file_obj)
                 image=models.Image(image=image_name,request_id=result.request_id,etag=result.etag)
                 image.save()
