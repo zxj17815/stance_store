@@ -291,7 +291,7 @@ class Logistics(viewsets.ViewSet):
         res = requests.post(url,data=send_data,headers=head)
         data = json.loads(res.content.decode('utf-8'))
         print(data)
-        if 'errcode' in data:
+        if 'errcode' in data and data['errcode']!="ok":
             return Response(data,status=status.HTTP_400_BAD_REQUEST)
         else:
             # 增加运单，序列化器已经集成修改订单状态为发货状态（2：待确认）
