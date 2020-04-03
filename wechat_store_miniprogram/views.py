@@ -53,7 +53,7 @@ _biz_id= "5731446951"
 # 微信小程序的appid和secret
 APPID = access_key.MINIPROGRAM['APP_ID']
 SECRET = access_key.MINIPROGRAM['SECRET']
-PAY_CALL_BACK='http://api.iceiceice.work/miniprogram/v1/pay_call_back/' # 微信支付的回调地址
+PAY_CALL_BACK=access_key.PAY_CALL_BACK # 微信支付的回调地址
 
 # 自定义错误代码
 CODE = {
